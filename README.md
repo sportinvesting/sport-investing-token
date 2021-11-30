@@ -1,15 +1,19 @@
-# Basic Sample Hardhat Project
+# SportInvesting Token
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Token smartcontract features:
 
-Try running some of the following tasks:
+Upgradeable (we can add new functions, but cannot delete old methods)
+Pausable (Admin can pause all token transfers)
+Users can give permit for metatransactions
+
+
+How to deploy
+
 
 ```shell
-npx hardhat accounts
+yarn
+
 npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+
+npx hardhat run --network bsctestnet scripts/deploy.js
 ```
